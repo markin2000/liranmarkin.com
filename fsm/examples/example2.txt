@@ -1,0 +1,14 @@
+# sometimes the machine jumps regardless of the input.
+# every character in the input aiming only to one state.
+# the i-th character in the input effects the i-th state the machine visit at.
+
+# the first state is the one written topmost. regardless to it's label.
+q0:
+print 0
+goto q1
+
+q1:
+print 1
+goto q0
+
+# in this example the machine prints 0 if the *length* of the input is even and 1 if it is odd.

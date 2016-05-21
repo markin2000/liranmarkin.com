@@ -1,0 +1,59 @@
+
+.fsm  h1 {
+    font: bold italic 50px Georgia, serif;
+}
+
+.canvas{
+    margin: auto;
+}
+.fsm{
+    margin-right: 10px;
+    float: right;
+    display: inline-block;
+}
+
+#canvas {
+    display: block;
+    max-width: 800px;
+    background: white;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    margin: 10px auto;
+}
+
+.fsm  a {
+    color: black;
+}
+
+.fsm  div {
+    margin: 30px auto;
+    text-align: left;
+    max-width: 800px;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 28px;
+    line-height: 30px;
+    padding: 30px;
+}
+
+.fsm  p {
+    margin: 30px 0;
+    line-height: 20px;
+}
+.fsm-textarea {
+    display: none;
+    width: 75%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+}
+
+header{
+    text-align: center;
+}

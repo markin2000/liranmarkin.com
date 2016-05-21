@@ -1,0 +1,22 @@
+# this machine receives a number and prints
+# it's remainder in division by 3.
+
+# use , to make multiple characters jump to same label.
+
+q0:
+print 0
+on 1,4,7 q1
+on 2,5,8 q2
+goto q0
+
+q1:
+print 1
+on 1,4,7 q2
+on 2,5,8 q0
+goto q1
+
+q2:
+print 2
+on 1,4,7 q0
+on 2,5,8 q1
+goto q2

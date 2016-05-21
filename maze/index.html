@@ -1,0 +1,23 @@
+<html ng-app="generator">
+	<head>
+		<title>maze-generator</title>
+		<link href="mainStyleSheet.css" rel="stylesheet" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	</head>
+	<body><center>
+		<div class="container" ng-controller="mazeController as maze">
+			Enter maze size: <input name="size" type="number" ng-model="maze.n"/> (1-50)
+			<div class="refresh" ng-click="maze.initMaze()"> Generate maze... </div>
+			<canvas id="canvas" width="{{15*maze.n}}" height="{{15*maze.n}}" ng-show="maze.showMaze">
+				
+			</canvas>
+			<div class="refresh" ng-click="maze.draw(true)" ng-show="maze.showMaze"> show solution </div>
+			
+		</div>
+		created by: <a href="http://markin2000.xyz/">markin2000</a> & <a href="https://github.com/noamgolani">noamgolani</a> 
+		</center>
+		<script src="generator.js"></script>
+	</body>
+		
+
+</html>
