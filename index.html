@@ -15,6 +15,11 @@
 		<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<style>
+			ul > li {
+				margin-left: 20px;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -36,6 +41,7 @@
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="#publications" id="publications-link" class="skel-layers-ignoreHref"><span class="icon fa-graduation-cap">Publications</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
 								<li><a href="./LiranMarkinCV.pdf" id="cv-link" class="skel-layers-ignoreHref"><span class="icon fa-file-pdf-o">CV</span></a></li>
@@ -143,8 +149,21 @@
 						</div>
 					</section>
 
+				<!-- Publications -->
+					<section id="publications" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Publications</h2>
+							</header>
+							<ul style="list-style-type:disc; display: table; text-align: left">
+								<li><a href="./publications/knapsack.pdf">A Faster FPTAS for #Knapsack</a> | Paweł Gawrychowski, Liran Markin, Oren Weimann | <a href="https://iuuk.mff.cuni.cz/~icalp2018/">ICALP 2018</a></li>
+							</ul>
+						</div>
+					</section>
+
 				<!-- About Me -->
-					<section id="about" class="three">
+					<section id="about" class="two">
 						<div class="container">
 
 							<header>
@@ -153,11 +172,19 @@
 
 							<a href="#" class="image featured"><img src="images/about.jpg" alt=""/></a>
 							<ul style="list-style-type:disc; display: table; text-align: left">
-								<li>19 years old.</li>
+								<li><span id="age"></span> years old.</li>
 								<li>Programming since age 13.</li>
 								<li>Fascinate about algorithms and mathematics.</li>
-								<li>Participated and won bronze medals at the International Olympiad in Informatics 2015, 2016 <a href="http://stats.ioinformatics.org/people/5625">(link)</a>, a silver medal in the Southwestern Europe Regional ACM-ICPC Contest 2016. <a href="http://codeforces.com/profile/markin2000">[codeforces]<a/>, <a href="https://www.topcoder.com/member-profile/markin2000/">[topcoder]</a>.</li>
-								<li>A student in "Etgar" program at the University of Haifa</li>
+								<li>Participated in international competitions:
+									<ul style="list-style-type: circle">
+										<li>International Olympiad in Informatics <a href="http://stats.ioinformatics.org/people/5625">(link)</a> 2015, Bronze medal</li>
+										<li>International Olympiad in Informatics 2016, Bronze medal</li>
+										<li>Southwestern Europe Regional ACM-ICPC Contest 2016, Silver medal</li>
+										<li>Southwestern Europe Regional ACM-ICPC Contest 2017, Bronze medal</li>
+										<li><a href="http://codeforces.com/profile/markin2000">[codeforces]<a/>, <a href="https://www.topcoder.com/member-profile/markin2000/">[topcoder]</a></li>
+									</ul>
+								</li>
+								<li>M.Sc. student in Computer Science at University of Haifa. Former student in "Etgar" program.</li>
 							</ul>
 						</div>
 					</section>
@@ -218,6 +245,9 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				$('#age').text( Number((Date.now() - new Date(1998, 2, 30).getTime()) / 31536000000).toFixed(0) ) 
+			</script>
 
 	</body>
 </html>
