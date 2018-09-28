@@ -243,10 +243,12 @@
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="assets/js/moment.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script>
-				$('#age').text( Number((Date.now() - new Date(1998, 2, 30).getTime()) / 31536000000).toFixed(0) ) 
+				// calculate age from day of birth.
+				$('#age').text( moment().diff(moment('1998-03-30'), 'years') ) 
 			</script>
 
 	</body>
