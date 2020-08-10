@@ -1,0 +1,334 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>deha | Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body {
+            padding-top: 80px;
+            padding-bottom: 20px;
+        }
+
+        .affix {
+            top: 80px;
+        }
+
+        .list-group-item{
+            padding: 10px 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#">
+                    <img class="navbar-brand" src="logo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" style="position: relative;">
+            <div class="col-md-3">
+                <div class="list-group table-of-contents">
+                    <a class="list-group-item" href="#htmlStructure">HTML Structure</a>
+                    <a class="list-group-item" href="#cssJs">CSS &amp; JavaScript</a>
+                    <a class="list-group-item" href="#colorSchemes">Color Schemes</a>
+                    <a class="list-group-item" href="#socialLinks">Social Links</a>
+                    <a class="list-group-item" href="#backgroundImage">Background Image</a>
+                    <a class="list-group-item" href="#nameSkills">Name &amp; Skills</a>
+                    <a class="list-group-item" href="#animations">Animations</a>
+                    <a class="list-group-item" href="#aboutSection">About Section</a>
+                    <a class="list-group-item" href="#resumeSection">Resume Section</a>
+                    <a class="list-group-item" href="#portfolioSection">Portfolio Section</a>
+                    <a class="list-group-item" href="#contact">Contact Form</a>
+                    <a class="list-group-item" href="#credits">Credits</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="jumbotron" id="home">
+                    <div class="container">
+                        <h1>Thank You!</h1>
+                        <p>Thank you for purchasing this theme. If you have any questions that are beyond the scope of this documentation, please feel free to email via my user page contact form <a href="http://themeforest.net/user/shahzoab">here</a>.</p>
+                        <p>
+                            <small class="mr10">Created on: 27-Sep-2016</small>
+                            <small class="mr10">Version: 1.1</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt60" id="htmlStructure">
+                    <h4>HTML Structure</h4>
+                    <p>deha is a one page HTML template. So, mostly you will need to edit index.html. All of the information is divided into sections.</p>
+<pre>&lt;!--===================================
+    START === Home Page
+===================================--&gt;
+&lt;main&gt;
+.......
+&lt;/main&gt;
+&lt;!--===================================
+    END === Home Page 
+===================================--&gt;
+
+&lt;!--===================================
+    START === About Section
+===================================--&gt;
+&lt;section id=&quot;about_section&quot; class=&quot;ui fullscreen modal&quot;&gt;
+.......
+&lt;/section&gt;
+&lt;!--===================================
+    END === About Section
+===================================--&gt;
+
+&lt;!--===================================
+    START === Resume Section
+===================================--&gt;
+&lt;section id=&quot;resume_section&quot; class=&quot;ui fullscreen modal&quot;&gt;
+.......
+&lt;/section&gt;
+&lt;!--===================================
+    END === Resume Section
+===================================--&gt;
+
+&lt;!--===================================
+    START === Portfolio Section
+===================================--&gt;
+&lt;section id=&quot;portfolio_section&quot; class=&quot;ui fullscreen modal&quot;&gt;
+.......
+&lt;/section&gt;
+&lt;!--===================================
+    END === Portfolio Section
+===================================--&gt;
+
+&lt;!--===================================
+    START === Contact Section
+===================================--&gt;
+&lt;section id=&quot;contact_section&quot; class=&quot;ui fullscreen modal&quot;&gt;
+.......
+&lt;/section&gt;
+&lt;!--===================================
+    END === Contact Section
+===================================--&gt;</pre>
+                    <ul class="mt20">
+                        <li>Separate folders are created for .css, .js files and for images.</li>
+                        <li>Mailgun folder is for sending emails.</li>
+                        <li>Important .php files for sending emails are located in root folder.</li>
+                    </ul>
+                </div>
+
+                <div class="pt60" id="cssJs">
+                    <h4>CSS &amp; JavaScript</h4>
+                    <p>Following CSS files must be included in your HTML file with respective order to make this theme work. Make sure path of the CSS folder is mentioned correctly.</p>
+<pre>&lt;!--===================================
+    START === CSS Files
+===================================--&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/vendors/semantic.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/vendors/magnific-popup.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/vendors/animate.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;!--===================================
+    END === CSS Files
+===================================--&gt;</pre>
+
+                    <p>Following JS files must be included in your HTML page with respective order to make this theme work. Make sure path of the JS folder is mentioned correctly.</p>
+<pre>&lt;!--===================================
+    START === JavaScript Files
+===================================--&gt;
+&lt;script src=&quot;js/vendors/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/semantic.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/morphext.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/jquery.magnific-popup.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/Chart.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/jquery.shuffle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/vendors/jquery.sliphover.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;
+&lt;!--===================================
+    END === JavaScript Files
+===================================--&gt;</pre>
+                </div>
+
+                <div class="pt60" id="colorSchemes">
+                    <h4>Color Schemes</h4>
+                    <p>If you would like to change color scheme, find stylesheet with the id of <code>theme-color</code> in <code>index.html</code> file and replace <code>href</code> attribute with the following color options.</p>
+                    <p> <code>default</code>, <code>pink</code>, <code>teal</code>, <code>green</code>, <code>light-green</code>, <code>amber</code>, <code>orange</code></p>
+                </div>
+
+                <div class="pt60" id="socialLinks">
+                    <h4>Social Links</h4>
+                    <p>If you would like to put your social links, find <code>Social Icons</code> label within <code>home section</code> in <code>index.html</code> file and add links in the <code>href</code> attribute with your respective links.</p>
+                </div>
+                
+                <div class="pt60" id="backgroundImage">
+                    <h4>Background Image</h4>
+                    <p>If you would like to change the background image, add the following code before <code>&lt;/header&gt;</code> tag in <code>index.html</code> file.</p>
+<pre>&lt;style&gt;
+main {
+    background-image: url(images/backgound.jpg) !important;
+}
+&lt;/style&gt;</pre>
+                <p>Replace <code>backgound.jpg</code> with your image name.</p>
+                </div>
+
+                <div class="pt60" id="nameSkills">
+                    <h4>Name &amp; Skills</h4>
+                    <p>If you would like to edit the name and skills, find <code>Name &amp; Skills</code> label within <code>home section</code> in <code>index.html</code> file and replace the information with yours.</p>
+                    <p>The animated skills are in a div with <code>js-rotating</code> id, you can add as many as can with comma separated values.</p>
+                    <p>If you would like to change the animation effect of skills, find<code>Animated Skills</code> section in <code>main.js</code> file and replace <code>fadeInDown</code> with your desired effect.</p>
+                    <p>You can see the complete list of animation effects here <a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a>.</p>
+                </div>
+
+                <div class="pt60" id="animations">
+                    <h4>Animations</h4>
+                    <p>This theme has a function for animations which depends upon <code>animate.css</code>.</p>
+                    <p>To apply animation to any element you just need to add the <code>data-anim-effect</code> attribute with the value of animation name.</p>
+                    <p>If you want to delay an animation for an element you can add <code>data-anim-delay</code>attribute with the value in milliseconds. For reference <code>1000</code>milliseconds equals to 1 second.</p>
+                    <p>You can see the complete list of animation effects here <a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a>.</p>
+                </div>
+
+                <div class="pt60" id="aboutSection">
+                    <h4>About Section</h4>
+                    <p>If you would like to edit this section, simply find the <code>About Section</code> label in the <code>index.html</code> file, and then scroll down until you find the appropriate area that needs to be edited.</p>
+                </div>
+
+                <div class="pt60" id="resumeSection">
+                    <h4>Resume Section</h4>
+                    <p>The filters you see at the top of this section are wrapped in a div with id <code>filter-resume-group</code>. All the <code>&lt;a&gt;</code> tags has <code>data-group</code> attribute which links to the class name it filters.</p>
+                    <p>If you would like to add a timeline block, copy the div with class name <code>timeline-block</code> and paste it. To remove a block simply delete the div with class name <code>timeline-block</code>.</p>
+                    <p>If you would like to add a chart, you would do the following:</p>
+                    <h5 class="mt30">Bar Chart</h5>
+                    <p>For Bar Chart, add a <code>canvas</code> tag with a unique id and <code>data-chart-type="bar"</code> attribute like the following:</p>
+<pre>&lt;canvas id=&quot;front_end_skills&quot; data-chart-type=&quot;bar&quot; data-labels='[&quot;HTML5&quot;, &quot;CSS3&quot;, &quot;SASS&quot;, &quot;jQuery&quot;, &quot;JavaScript&quot;, &quot;AngularJS&quot;]' data-values=&quot;[80, 80, 80, 80, 80, 60]&quot; data-colors='[&quot;#FF6384&quot;, &quot;#4BC0C0&quot;, &quot;#FFCE56&quot;, &quot;#4BC0C0&quot;, &quot;#36A2EB&quot;, &quot;#FF6384&quot;, &quot;#E7E9ED&quot;]' data-heading=&quot;Front End Skills&quot;&gt;&lt;/canvas&gt;</pre>
+                    <h5 class="mt30">Doughnut Chart</h5>
+                    <p>For Doughnut Chart, add a <code>canvas</code> tag with a unique id and <code>data-chart-type="doughnut"</code> attribute like the following:</p>
+<pre>&lt;canvas id=&quot;back_end_skills&quot; data-chart-type=&quot;doughnut&quot; data-labels='[&quot;PHP&quot;, &quot;SQL&quot;, &quot;WordPress&quot;]' data-values=&quot;[20, 20, 60]&quot; data-colors='[&quot;#FF6384&quot;, &quot;#36A2EB&quot;, &quot;#FFCE56&quot;]'&gt;&lt;/canvas&gt;</pre>
+                    <h5 class="mt30">Pie Chart</h5>
+                    <p>For Pie Chart, add a <code>canvas</code> tag with a unique id and <code>data-chart-type="pie"</code> attribute like the following:</p>
+<pre>&lt;canvas id=&quot;web_tools&quot; data-chart-type=&quot;pie&quot; data-labels='[&quot;Git&quot;, &quot;GruntJS&quot;]' data-values=&quot;[50, 50]&quot; data-colors='[&quot;#FF6384&quot;, &quot;#FFCE56&quot;]'&gt;&lt;/canvas&gt;</pre>
+                    <p>In all the above chart examples: <code>data-labels</code>, <code>data-values</code>, <code>data-colors</code> are required attributes and should be in a valid <code>JSON</code> format and should contain the same number of values in all three attributes. <code>data-heading</code> attribute is also required in bar chart.</p>
+                    <h5 class="mt30">Progress Bar</h5>
+                    <p>If you would like to add a progress bar, you would do the following:</p>
+<pre>&lt;div class=&quot;ui red progress&quot; data-percent=&quot;80&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;div class=&quot;label&quot;&gt;Adobe Flash&lt;/div&gt;
+        &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    <p>To change the percentage, change the value in <code>data-percent</code> attribute. To change the color of progress bar, you can replace the class name <code>red</code> with the following color options.</p>
+                    <p> <code>red</code>, <code>orange</code>, <code>yellow</code>, <code>olive</code>, <code>green</code>, <code>teal</code>, <code>blue</code>, <code>violet</code>, <code>purple</code>, <code>pink</code>, <code>brown</code>, <code>grey</code>, <code>black</code></p>
+                    <h5 class="mt30">Rating</h5>
+                    <p>If you would like to add rating, you would do the following:</p>
+<pre>&lt;div class=&quot;rating&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;header&quot;&gt;
+            Spanish
+            &lt;div class=&quot;ui small star rating&quot; data-rating=&quot;4&quot; data-max-rating=&quot;5&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    <p><code>data-max-rating</code> contains the maximum number of rating and <code>data-rating</code> contains how much do you rate.</p>
+                </div>
+
+                <div class="pt60" id="portfolioSection">
+                    <h4>Portfolio Section</h4>
+                    <p>The filters you see at the top of this section are wrapped in a div with id <code>filter-portfolio-group</code>. All the <code>&lt;a&gt;</code> tags has <code>data-group</code> attribute which links to the <code>data-groups</code> attribute value it filters.</p>
+                    <p>A portfolio item consist of the following code:</p>
+<pre>&lt;div class=&quot;portfolio_item column&quot; data-groups=&quot;web&quot;&gt;
+    &lt;div data-anim-effect=&quot;zoomIn&quot; data-anim-delay=&quot;100&quot;&gt;
+        &lt;a href=&quot;#popup-1&quot; class=&quot;open-popup-link&quot;&gt;
+            &lt;img src=&quot;images/picture.jpg&quot; title=&quot;View Project&quot; alt=&quot;&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;popup-1&quot; class=&quot;white-popup mfp-hide&quot;&gt;
+        &lt;div class=&quot;ui items&quot;&gt;
+            &lt;div class=&quot;item&quot;&gt;
+                &lt;div class=&quot;ui image&quot;&gt;
+                    &lt;img src=&quot;images/picture.jpg&quot; alt=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;content&quot;&gt;
+                    &lt;div class=&quot;header&quot;&gt;Project Title&lt;/div&gt;
+                    &lt;div class=&quot;meta&quot;&gt;
+                        &lt;span&gt;Date&lt;/span&gt;
+                        &lt;span&gt;Category&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;description&quot;&gt;
+                    .......
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                    <p><code>data-groups</code> attribute contains the filter value.</p>
+                    <p><code>#popup-1</code> should be a unique id for every portfolio item.</p>
+                    <p>All the portfolio items are wrapped in a div with <code>portfolio_container</code> id.</p>
+                </div>
+
+                <div class="pt60" id="contact">
+                    <h4>Contact Form</h4>
+                    <p>Mailgun is integrated in this theme for uninterrupted emails. You can use this free service for 10,000 emails every month. Visit <a href="mailgun.com">mailgun.com</a> for more information.</p>
+                    <p>It is already integrated and ready to use. You just need to put your <code>domain details</code> &amp; <code>api-key</code> in mailgun-settings.php file.</p>
+                    <ol>
+                        <li>Create account on mailgun.com for free.</li>
+                        <li>You can use sandbox domain that you get or you can add your own domain with some simple steps provided at their website.</li>
+                        <li>You will need two important factors from your mailgun account. 1. Domain Name. 2. API Key</li>
+                        <li>Click on 'domains' link from navigation.</li>
+                        <li>Select the sandbox domain.</li>
+                        <li>On this screen on mailgun.com, you will get both details.</li>
+                        <li>Open <code>mailgun-settings.php</code> file which is included in the theme's root folder.</li>
+                        <li>
+                            Replace the mailgun domain name in <code>$mailgunDomain</code> variable &amp; API key in <code>$mailgunKey</code> variable.
+                        </li>
+                        <li>
+                            Replace the email address in <code>$yourEmail</code> variable with you own, where you want to receive emails from website.
+                        </li>
+                    </ol>
+                    <p>Make sure you have uploaded 'Mailgun' folder provided with your theme download.</p>
+                </div>
+
+                <div class="pt60" id="credits">
+                    <h4>Credits</h4>
+                    <ul>
+                        <li>Semantic UI - <a href="http://semantic-ui.com/" target="_blank">http://semantic-ui.com/</a></li>
+                        <li>jQuery - <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
+                        <li>animate.css - <a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a></li>
+                        <li>Magnific Popup - <a href="https://github.com/dimsemenov/Magnific-Popup/" target="_blank">https://github.com/dimsemenov/Magnific-Popup/</a></li>
+                        <li>Chart.js - <a href="http://www.chartjs.org/" target="_blank">http://www.chartjs.org/</a></li>
+                        <li>Shuffle.js - <a href="https://github.com/Vestride/Shuffle/" target="_blank">https://github.com/Vestride/Shuffle/</a></li>
+                        <li>Images - <a href="https://www.pexels.com/" target="_blank">https://www.pexels.com/</a></li>
+                        <li>Subtle Patterns - <a href="http://subtlepatterns.com/" target="_blank">http://subtlepatterns.com/</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

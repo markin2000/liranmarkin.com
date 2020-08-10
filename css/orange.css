@@ -1,0 +1,590 @@
+/****************************************
+    --- { Table of Contents } --- 
+    1. Base Styling
+    2. Home Page / main
+    3. About Section / #about_section
+    4. Resume Section / #resume_section
+    5. Portfolio Section / #portfolio_container
+    6. Color Schemes / #switcher
+****************************************/
+/****************************************
+    START --- 1. Base Styling
+****************************************/
+html {
+  height: 100vh;
+  overflow: hidden; }
+
+a {
+  color: #ff9800; }
+  a:hover {
+    color: #995b00; }
+
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #ff9800; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #ff9800; }
+
+#page-loader {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #ffffff;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 45vh; }
+
+@keyframes square-spin {
+  25% {
+    transform: perspective(100px) rotateX(180deg) rotateY(0); }
+  50% {
+    transform: perspective(100px) rotateX(180deg) rotateY(180deg); }
+  75% {
+    transform: perspective(100px) rotateX(0) rotateY(180deg); }
+  100% {
+    transform: perspective(100px) rotateX(0) rotateY(0); } }
+
+.square-spin > div {
+  animation-fill-mode: both;
+  width: 50px;
+  height: 50px;
+  background: #ff9800;
+  border: 1px solid white;
+  margin: 0 auto;
+  animation: square-spin 3s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite; }
+
+.ui.modal.fullscreen {
+  position: absolute;
+  top: 0px;
+  width: 100% !important;
+  height: 100vh;
+  overflow: hidden;
+  left: 0% !important;
+  margin-top: 0 !important;
+  border: 0px none;
+  box-shadow: none;
+  background-image: url(../images/light_wool.png);
+  overflow-y: auto; }
+  .ui.modal.fullscreen .fade-gradient {
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    top: -48px;
+    left: 0;
+    height: 277px;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 10%, white 50%);
+    -webkit-backface-visibility: hidden;
+    pointer-events: auto; }
+  .ui.modal.fullscreen > .header {
+    border: 0;
+    position: relative;
+    z-index: 10;
+    top: 2rem;
+    background: none; }
+    @media (max-width: 767px) {
+      .ui.modal.fullscreen > .header {
+        padding: 0 !important; } }
+    @media (max-width: 240px) {
+      .ui.modal.fullscreen > .header .left.floated.column, .ui.modal.fullscreen > .header .right.floated.column {
+        width: 100% !important;
+        float: none !important; } }
+    @media (max-width: 240px) {
+      .ui.modal.fullscreen > .header .right.floated.column h2.ui.header {
+        float: none;
+        margin-top: 20px;
+        margin-left: 15px; } }
+    .ui.modal.fullscreen > .header .backBtn {
+      cursor: pointer;
+      color: #ff9800;
+      margin-left: 1.5em;
+      font-size: 1em; }
+      @media (max-width: 768px) {
+        .ui.modal.fullscreen > .header .backBtn {
+          margin-left: 0.5em; } }
+      .ui.modal.fullscreen > .header .backBtn:hover {
+        color: #995b00; }
+      .ui.modal.fullscreen > .header .backBtn > .icon {
+        font-size: 1em; }
+    .ui.modal.fullscreen > .header .right.floated.column > h2 {
+      float: right;
+      margin-right: 1.5em;
+      color: #ff9800; }
+      @media (max-width: 768px) {
+        .ui.modal.fullscreen > .header .right.floated.column > h2 {
+          margin-right: 0.5em; } }
+      @media (max-width: 240px) {
+        .ui.modal.fullscreen > .header .right.floated.column > h2 {
+          margin-right: 0;
+          font-size: 20px; } }
+  .ui.modal.fullscreen > .content {
+    background: none;
+    margin-top: 4rem;
+    margin-bottom: 2rem; }
+    @media (max-width: 767px) {
+      .ui.modal.fullscreen > .content {
+        padding: 0 !important; } }
+    @media (max-width: 240px) {
+      .ui.modal.fullscreen > .content {
+        margin-top: 2rem; } }
+    .ui.modal.fullscreen > .content .contentModal {
+      margin: 8rem auto;
+      width: 80%; }
+      @media (max-width: 992px) {
+        .ui.modal.fullscreen > .content .contentModal {
+          width: 100%; } }
+
+.ui.modals.dimmer {
+  background-color: white; }
+  .ui.modals.dimmer .ui.scrolling.modal {
+    margin: 0 auto !important; }
+
+[data-anim-effect] {
+  visibility: hidden; }
+  @media (max-width: 767px) {
+    [data-anim-effect] {
+      visibility: visible; } }
+
+/****************************************
+    END --- Base Styling
+****************************************/
+/****************************************
+    START --- 2. Home Page
+****************************************/
+main {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  top: 0;
+  left: 0; }
+  main:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7); }
+  main #social_media_icons {
+    display: none;
+    padding: 5px 0 0 0 !important; }
+    main #social_media_icons .ui.button {
+      margin: 0px 0.3rem !important;
+      padding: 10px; }
+      main #social_media_icons .ui.button .icon {
+        margin: 0px;
+        padding: 0px; }
+  main #name_skills_container {
+    display: table;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%; }
+    main #name_skills_container #name_skills {
+      display: table-cell;
+      vertical-align: middle; }
+      main #name_skills_container #name_skills .name {
+        font-size: 4rem;
+        font-weight: 700;
+        min-height: 1rem;
+        line-height: 1.2857em; }
+        @media (max-width: 320px) {
+          main #name_skills_container #name_skills .name {
+            font-size: 28px; } }
+      main #name_skills_container #name_skills .skill-set {
+        font-size: 1.071em;
+        font-weight: 700;
+        line-height: 1.2857em; }
+        main #name_skills_container #name_skills .skill-set .animated_skills {
+          padding: 0.2em 0;
+          min-height: 3em !important; }
+          @media (max-width: 320px) {
+            main #name_skills_container #name_skills .skill-set .animated_skills {
+              font-size: 20px; } }
+          main #name_skills_container #name_skills .skill-set .animated_skills span {
+            display: inline-block;
+            transition: all 2s; }
+          main #name_skills_container #name_skills .skill-set .animated_skills #js-rotating {
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            overflow: hidden;
+            vertical-align: top;
+            color: #ff9800; }
+            @media (max-width: 768px) {
+              main #name_skills_container #name_skills .skill-set .animated_skills #js-rotating {
+                display: block;
+                margin: 0 auto;
+                text-align: center; } }
+  main .ui.menu.fixed {
+    background: transparent;
+    box-shadow: none;
+    border: 0; }
+    @media (max-width: 240px) {
+      main .ui.menu.fixed .item {
+        min-width: 4.3em !important; } }
+    main .ui.menu.fixed .item:before {
+      width: 0; }
+
+/****************************************
+    END --- 2. Home Page
+****************************************/
+/****************************************
+    START --- 3. About Section
+****************************************/
+#about_section .ui.dividing.header .icon {
+  color: #ff9800; }
+
+@media (max-width: 768px) {
+  #about_section .ui.image {
+    margin-left: 0; } }
+
+/****************************************
+    END --- 3. About Section
+****************************************/
+/****************************************
+    START --- 4. Resume Section
+****************************************/
+#resume_section .ui.menu, #portfolio_section .ui.menu {
+  position: relative;
+  background-color: #ff9800; }
+
+@media (max-width: 767px) {
+  .ui.text.container {
+    width: 90% !important;
+    margin: 0 auto !important; } }
+
+.ui.progress .bar > .label {
+  white-space: nowrap;
+  position: absolute;
+  width: auto;
+  font-size: .92857143em;
+  top: 50%;
+  left: .5em;
+  right: auto;
+  bottom: auto;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: none;
+  margin-top: -.5em;
+  font-weight: 700;
+  text-align: left; }
+
+.timeline-container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .timeline-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed; }
+    @media (min-width: 1170px) {
+      .timeline-container:before {
+        left: 50%;
+        margin-left: -2px; } }
+  .timeline-container:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media (min-width: 1170px) {
+    .timeline-container {
+      margin-top: 3em;
+      margin-bottom: 3em; } }
+  .timeline-container .timeline-block {
+    position: relative;
+    margin: 2em 0; }
+    @media (min-width: 1170px) {
+      .timeline-container .timeline-block {
+        margin: -2em 0; } }
+    .timeline-container .timeline-block:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .timeline-container .timeline-block:first-child {
+      margin-top: 0; }
+      @media (min-width: 1170px) {
+        .timeline-container .timeline-block:first-child {
+          margin-top: 0; } }
+    .timeline-container .timeline-block:last-child {
+      margin-bottom: 0; }
+      @media (min-width: 1170px) {
+        .timeline-container .timeline-block:last-child {
+          margin-bottom: 0; } }
+    .timeline-container .timeline-block .timeline-content {
+      position: relative;
+      margin-left: 60px;
+      background: #F5F5F5;
+      border-radius: 0.25em;
+      box-shadow: 0 1px 0 #d7e4ed;
+      border: 1px solid #d7e4ed;
+      padding: 0;
+      width: 80%; }
+      @media (min-width: 1170px) {
+        .timeline-container .timeline-block .timeline-content {
+          margin-left: 0;
+          width: 45%; } }
+      .timeline-container .timeline-block .timeline-content:before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid #ff9800; }
+        @media (min-width: 1170px) {
+          .timeline-container .timeline-block .timeline-content:before {
+            top: 24px;
+            left: 100%;
+            border-color: transparent;
+            border-left-color: #ff9800; } }
+      .timeline-container .timeline-block .timeline-content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .timeline-container .timeline-block .timeline-content h2 {
+        background-color: #ff9800;
+        color: white;
+        padding: 1em;
+        margin: 0; }
+        @media (min-width: 768px) {
+          .timeline-container .timeline-block .timeline-content h2 {
+            font-size: 20px;
+            font-size: 1.25rem; } }
+        @media (max-width: 240px) {
+          .timeline-container .timeline-block .timeline-content h2 {
+            padding: 0.5em;
+            font-size: 18px; } }
+      .timeline-container .timeline-block .timeline-content p {
+        font-size: 13px;
+        font-size: 1.2rem;
+        margin: 0;
+        line-height: 1.6;
+        padding: 1em; }
+        @media (min-width: 768px) {
+          .timeline-container .timeline-block .timeline-content p {
+            font-size: 16px;
+            font-size: 1rem; } }
+        @media (max-width: 240px) {
+          .timeline-container .timeline-block .timeline-content p {
+            padding: 0.5em;
+            font-size: 14px; } }
+    .timeline-container .timeline-block .timeline-img {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 50px;
+      height: 20px; }
+      @media (min-width: 1170px) {
+        .timeline-container .timeline-block .timeline-img {
+          top: 20px;
+          left: 50%;
+          margin-left: -24px;
+          -webkit-backface-visibility: hidden; } }
+      .timeline-container .timeline-block .timeline-img i {
+        color: #ff9800;
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: white; }
+      .timeline-container .timeline-block .timeline-img img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px; }
+    @media (min-width: 1170px) {
+      .timeline-container .timeline-block:nth-child(even) .timeline-content {
+        float: right; } }
+    @media (min-width: 1170px) {
+      .timeline-container .timeline-block:nth-child(even) .timeline-content::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: #ff9800; } }
+
+.testimonial_container .ui.segment, .testimonial_left .ui.segment, .testimonial_right .ui.segment {
+  min-height: 8rem;
+  top: 29px;
+  margin: 0 5% 4%; }
+
+.testimonial_container .icon, .testimonial_left .icon, .testimonial_right .icon {
+  position: absolute;
+  top: 10px;
+  color: #ff9800; }
+
+.testimonial_container p, .testimonial_left p, .testimonial_right p {
+  margin: 1em auto; }
+
+.testimonial_container .label, .testimonial_left .label, .testimonial_right .label {
+  background-color: #ff9800;
+  color: white; }
+  .testimonial_container .label:hover, .testimonial_left .label:hover, .testimonial_right .label:hover {
+    background-color: #ff9800 !important;
+    color: white !important; }
+  .testimonial_container .label .person, .testimonial_left .label .person, .testimonial_right .label .person {
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block; }
+  .testimonial_container .label .position, .testimonial_left .label .position, .testimonial_right .label .position {
+    display: block; }
+
+.testimonial_left .icon {
+  left: -25px; }
+
+.testimonial_right .icon {
+  right: -25px; }
+
+/****************************************
+    END --- 4. Resume Section
+****************************************/
+/****************************************
+    START --- 5. Portfolio Section
+****************************************/
+#portfolio_container {
+  margin: 0 auto !important; }
+  #portfolio_container .portfolio_item {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden; }
+    #portfolio_container .portfolio_item img {
+      width: 100%; }
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  max-height: 90vh;
+  overflow: auto; }
+  @media (max-width: 768px) {
+    .white-popup {
+      padding: 30px; } }
+  .white-popup .ui.items {
+    margin: 0; }
+    .white-popup .ui.items > .item > .image {
+      width: 45%; }
+      @media (max-width: 768px) {
+        .white-popup .ui.items > .item > .image {
+          max-height: 400px !important; } }
+      @media (max-width: 768px) {
+        .white-popup .ui.items > .item > .image img {
+          max-height: 400px !important; } }
+
+/****************************************
+    END --- 5. Portfolio Section
+****************************************/
+/****************************************
+    START --- 6. Color Schemes
+****************************************/
+#switcher {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  padding: 20px;
+  right: -200px;
+  background: rgba(0, 0, 0, 0.85);
+  width: 200px;
+  transition: all 0.4s ease; }
+  #switcher.active {
+    right: 0; }
+    #switcher.active .handle {
+      background: rgba(0, 0, 0, 0.85); }
+      #switcher.active .handle:hover {
+        background: rgba(0, 0, 0, 0.85); }
+  #switcher .handle {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease; }
+    #switcher .handle:hover {
+      background: rgba(255, 255, 255, 0.08); }
+  #switcher p {
+    color: white;
+    font-size: 11px; }
+    #switcher p a {
+      color: white;
+      transition: all 0.4s ease; }
+  #switcher h5 {
+    font-size: 14px;
+    color: white; }
+  #switcher .color {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer; }
+    #switcher .color.active {
+      border: 2px solid white; }
+  #switcher .default {
+    background: #00bcd4; }
+  #switcher .pink {
+    background: #e91e63; }
+  #switcher .teal {
+    background: #009688; }
+  #switcher .green {
+    background: #4caf50; }
+  #switcher .light-green {
+    background: #8bc34a; }
+  #switcher .amber {
+    background: #ffc107; }
+  #switcher .orange {
+    background: #ff9800; }
+  #switcher .switch-header {
+    padding: 5px 10px;
+    border: 1px solid white;
+    display: block;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: white; }
+
+/****************************************
+    END --- 6. Color Schemes
+****************************************/
