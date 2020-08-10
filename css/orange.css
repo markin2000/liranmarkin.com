@@ -267,7 +267,7 @@ main {
 /****************************************
     START --- 4. Resume Section
 ****************************************/
-#resume_section .ui.menu, #portfolio_section .ui.menu {
+#resume_section .ui.menu, #books_section .ui.menu {
   position: relative;
   background-color: #ff9800; }
 

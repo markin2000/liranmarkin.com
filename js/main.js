@@ -48,7 +48,7 @@ $(document).ready(function() {
 	/////////////////////////////////////////////
 
 	// Initializing Modals
-	$( '[id$=_section]:not("#portfolio_section")' ).modal({
+	$( '[id$=_section]:not("#books_section")' ).modal({
 		allowMultiple: true,
 		transition: 'scale',
 		closable: false,
@@ -59,7 +59,7 @@ $(document).ready(function() {
 			$(this).find('[data-anim-effect]').removeAttr('style');
 		}
 	});
-	$( '#portfolio_section' ).modal({
+	$( '#books_section' ).modal({
 		allowMultiple: true,
 		transition: 'scale',
 		closable: false,
