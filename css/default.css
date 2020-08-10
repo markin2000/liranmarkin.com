@@ -33,6 +33,26 @@ border-radius:8px;
 
 }
 
+.valueLi{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media only screen and (max-width: 600px){
+.valueLi{
+  grid-template-columns: 1fr 1fr ;
+  padding-inline-start:0px;
+
+}
+.border{
+  margin:5px;
+  margin-top: 15px;
+
+}
+.valueContainer{
+  margin-left: 0px;
+  margin-right: 0px;
+} 
+}
 a {
   color: #00BCD4; }
   a:hover {
