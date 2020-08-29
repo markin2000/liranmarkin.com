@@ -13,8 +13,8 @@
 |
 */
 
-$mailgunKey = 'key-fd8ae0a70b4692a1346b6f833c4d6c21'; //Will be like key-........
-$mailgunDomain = 'sandboxb891b07a6bb446ba9f281ebe0d6ee0b8.mailgun.org'; //You can use sandbox domain provided by mailgun
+$mailgunKey = '8328f19f89c4ee3595d0b4e09bb90f41-4d640632-39fcb777'; //Will be like key-........
+$mailgunDomain = 'sandboxf31749855bd84833a4d97a231e04aac5.mailgun.org'; //You can use sandbox domain provided by mailgun
 
 
 // Your details to receive email from end-user
